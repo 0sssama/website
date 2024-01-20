@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   title: 'Home / Labrahmi',
   description: 'Turning ideas into seamless and blazing-fast products.',
   applicationName: 'Labrahmi.me',
+  metadataBase: new URL('https://labrahmi.me'),
   authors: [{ name: 'XO Software', url: 'https://www.xo.software/' }],
+  alternates: {
+    canonical: '/',
+  },
   keywords: [
     'software',
     'nextjs',
