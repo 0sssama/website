@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { Analytics } from '@vercel/analytics/react';
 
 import { calSansFont } from '@/base/config/fonts.config';
 
@@ -9,6 +10,7 @@ export default function GlobalLayout({ children }: GlobalLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <body className={clsx('overflow-x-hidden bg-zinc-900 text-zinc-50 *:scroll-smooth', calSansFont.className)}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
