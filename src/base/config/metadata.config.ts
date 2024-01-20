@@ -4,13 +4,14 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  themeColor: '#18181b',
 };
 
 export const metadata: Metadata = {
   title: 'Home / Labrahmi',
   description: 'Turning ideas into seamless and blazing-fast products.',
   applicationName: 'Labrahmi.me',
-  metadataBase: new URL('https://labrahmi.me'),
+  metadataBase: new URL('https://new.labrahmi.me'),
   authors: [{ name: 'XO Software', url: 'https://www.xo.software/' }],
   alternates: {
     canonical: '/',
@@ -28,10 +29,9 @@ export const metadata: Metadata = {
     'javascript',
   ],
   robots: 'index, follow',
-  themeColor: '#000000',
   openGraph: {
     type: 'website',
-    url: 'https://labrahmi.me/',
+    url: 'https://new.labrahmi.me/',
     title: 'Home / Labrahmi',
     description: 'Turning ideas into seamless and blazing-fast products.',
     images: [
