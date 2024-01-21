@@ -4,7 +4,19 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-gradient-to-b from-zinc-900 to-black text-zinc-50;
+    @apply relative overflow-x-hidden bg-gradient-to-b from-zinc-900 to-black  text-zinc-50;
+  }
+
+  body::after {
+    /* boxes grid background */
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(39, 39, 42, 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(39, 39, 42, 0.5) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
   }
 }
 

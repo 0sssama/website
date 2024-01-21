@@ -8,11 +8,9 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        calSans: ['var(--font-calSans)', ...defaultTheme.fontFamily.sans],
-        satoshi: ['var(--font-satoshi)', ...defaultTheme.fontFamily.mono],
-      },
+    fontFamily: {
+      calSans: ['var(--font-calSans)', ...defaultTheme.fontFamily.sans],
+      satoshi: ['var(--font-satoshi)', ...defaultTheme.fontFamily.mono],
     },
   },
   plugins: [],
