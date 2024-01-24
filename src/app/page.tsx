@@ -1,7 +1,9 @@
-export default function Home() {
+import { Home } from '@/components/sections/home';
+
+export default function HomePage() {
   return (
-    <main className="grid h-screen min-h-[5000px] w-full place-items-center text-center text-4xl">
-      <h1 className="!font-calSans">TESTING</h1>
+    <main className="h-screen min-h-[5000px] w-full pt-32">
+      <Home />
     </main>
   );
 }
