@@ -7,16 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "run-preview": "local-ssl-proxy --source 3010 --target 3000 --cert ~/localhost.pem --key ~/localhost-key.pem"
   },
   "dependencies": {
+    "@storyblok/react": "3.0.8",
     "@vercel/analytics": "1.1.2",
     "clsx": "2.1.0",
+    "markdown-to-jsx": "7.4.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -41,6 +45,7 @@
     "eslint-plugin-unused-imports": "3.0.0",
     "husky": "8.0.0",
     "lint-staged": "^14.0.1",
+    "local-ssl-proxy": "2.0.5",
     "postcss": "^8",
     "prettier": "3.1.1",
     "prettier-plugin-tailwindcss": "0.5.9",

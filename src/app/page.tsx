@@ -1,9 +1,17 @@
-import { Home } from '@/components/sections/home';
+import { notFound } from 'next/navigation';
 
-export default function HomePage() {
+import { getPageBySlug } from '@/base/services/storyblok';
+import { PageBuilder } from '@/components/templates/page-builder';
+
+export default async function HomePage() {
+  const page = await getPageBySlug('home');
+
+  if (!page) notFound();
+
   return (
-    <main className="h-screen min-h-[5000px] w-full pt-32">
-      <Home />
-    </main>
+    <div>
+      <h1>Home</h1>
+      <PageBuilder sections={page.sections} />
+    </div>
   );
 }

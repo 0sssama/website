@@ -9,10 +9,10 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      calSans: ['var(--font-calSans)', ...defaultTheme.fontFamily.sans],
-      satoshi: ['var(--font-satoshi)', ...defaultTheme.fontFamily.mono],
+      serif: ['var(--font-cal-sans)', ...defaultTheme.fontFamily.sans],
+      sans: ['var(--font-dm-sans)', ...defaultTheme.fontFamily.mono],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 export default config;
