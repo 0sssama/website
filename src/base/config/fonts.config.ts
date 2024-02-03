@@ -135,7 +135,7 @@ export const dmSansFont = localFont({
       style: 'normal',
     },
     {
-      path: '../../assets/fonts/dm-sans/DMSans-italic.ttf',
+      path: '../../assets/fonts/dm-sans/DMSans-Italic.ttf',
       weight: '400',
       style: 'italic',
     },
