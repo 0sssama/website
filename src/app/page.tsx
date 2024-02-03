@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 
 import { getPageBySlug } from '@/base/services/storyblok';
 import { PageBuilder } from '@/components/templates/page-builder';
+import { getPageMetadata } from '@/base/services/storyblok/utils/get-page-metadata';
 
 export default async function HomePage() {
   const page = await getPageBySlug('home');
@@ -9,9 +10,12 @@ export default async function HomePage() {
   if (!page) notFound();
 
   return (
-    <div>
-      <h1>Home</h1>
+    <main className="w-full">
       <PageBuilder sections={page.sections} />
-    </div>
+    </main>
   );
+}
+
+export async function generateMetadata() {
+  return getPageMetadata('home');
 }

@@ -6,9 +6,10 @@ export interface ISbStoryData {
 }
 
 export interface SeoModel extends ISbStoryData {
-  title: string;
-  description: string;
-  component: 'seo';
+  title?: string;
+  description?: string;
+  noIndex?: boolean;
+  ogType?: 'website' | 'article';
 }
 
 export interface SbPageData extends ISbStoryData {
