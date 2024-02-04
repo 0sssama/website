@@ -7,6 +7,8 @@
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
 
+    --text-gradient: linear-gradient(120deg, #fff, #adadad);
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
 
@@ -46,8 +48,8 @@
     inset: 0;
     pointer-events: none;
     z-index: -1;
-    background-image: linear-gradient(to right, rgba(39, 39, 42, 0.5) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(39, 39, 42, 0.5) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(39, 39, 42, 0.7) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(39, 39, 42, 0.7) 1px, transparent 1px);
     background-size: 2.5rem 2.5rem;
     background-position: center center;
   }
@@ -56,6 +58,12 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient-title {
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   * {

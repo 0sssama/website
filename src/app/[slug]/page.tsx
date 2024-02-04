@@ -11,7 +11,7 @@ export default async function Home({ params }: NextPageProps) {
   if (!page) notFound();
 
   return (
-    <main className="w-full">
+    <main>
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );

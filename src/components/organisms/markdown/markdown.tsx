@@ -6,9 +6,9 @@ import { sanitizeMarkdown } from '@/base/utils/sanitize-markdown';
 import type { MarkdownProps } from './markdown.types';
 
 export default function Markdown({ className, content, ...props }: MarkdownProps) {
-  const preparedMarkdown = sanitizeMarkdown(content || props.children) || '';
+  const preparedMarkdown = sanitizeMarkdown(content) || '';
 
-  if (!content && !props.children) return null;
+  if (!content) return null;
 
   return (
     <div className={clsx('prose prose-invert lg:prose-xl', className)}>
