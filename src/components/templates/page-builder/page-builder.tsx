@@ -1,5 +1,4 @@
 import { componentsRegistry } from '@/base/utils/components-registry';
-import { Container } from '@/components/layouts/container';
 
 import type { PageBuilderProps, PageSectionProps } from './page-builder.types';
 
@@ -8,9 +7,9 @@ function PageSection({ section }: PageSectionProps) {
 
   if (!Component)
     return (
-      <Container className="grid min-h-[400px] place-items-center text-center">
+      <section className="container grid min-h-[400px] place-items-center text-center">
         <p>Section with name &apos;{section.component}&apos; doesn&apos;t exist</p>
-      </Container>
+      </section>
     );
 
   return <Component {...section} />;
