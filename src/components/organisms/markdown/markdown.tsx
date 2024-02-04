@@ -11,7 +11,7 @@ export default function Markdown({ className, content, ...props }: MarkdownProps
   if (!content && !props.children) return null;
 
   return (
-    <div className={clsx('prose lg:prose-xl dark:prose-invert', className)}>
+    <div className={clsx('prose prose-invert lg:prose-xl', className)}>
       <MarkdownToJSX {...props}>{preparedMarkdown}</MarkdownToJSX>
     </div>
   );
