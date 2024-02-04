@@ -12,7 +12,7 @@ export default async function Home({ params }: NextPageProps) {
 
   return (
     <main className="w-full">
-      <PageBuilder sections={page.sections} />
+      <PageBuilder sections={page.sections ?? []} />
     </main>
   );
 }

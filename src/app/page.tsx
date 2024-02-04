@@ -12,7 +12,7 @@ export default async function HomePage() {
 
   return (
     <Container as="main" className="py-36 text-center">
-      <PageBuilder sections={page.sections} />
+      <PageBuilder sections={page.sections ?? []} />
     </Container>
   );
 }

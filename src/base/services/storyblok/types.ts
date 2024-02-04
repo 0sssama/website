@@ -1,4 +1,5 @@
 import type { SectionModel } from '@/base/types/page';
+import type { HeaderModel } from '@/components/layouts/header';
 
 export interface ISbStoryData {
   _uid: string;
@@ -13,7 +14,8 @@ export interface SeoModel extends ISbStoryData {
 }
 
 export interface SbPageData extends ISbStoryData {
-  seo: SeoModel[];
-  sections: SectionModel[];
-  component: 'page';
+  seo?: SeoModel[];
+  sections?: SectionModel[];
+  header?: HeaderModel[];
+  component: 'page' | 'layout';
 }
