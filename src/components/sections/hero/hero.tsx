@@ -38,23 +38,34 @@ export default function Hero({ heading, description, buttons, className }: HeroP
   );
 }
 
+const transition: Transition = {
+  duration: 1,
+  ease: [0.59, 0, 0.06, 1],
+};
+
 const container = {
-  hidden: { opacity: 0 },
+  hidden: {
+    opacity: 0,
+    // y: 30,
+  },
   visible: {
     opacity: 1,
+    // y: 0,
     transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.6,
+      duration: 0.5,
+      staggerChildren: 0.5,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0 },
-};
-
-const transition: Transition = {
-  duration: 0.8,
-  ease: [0.59, 0, 0.06, 1],
+  hidden: {
+    // y: 15,
+    opacity: 0,
+  },
+  visible: {
+    // y: 0,
+    opacity: 1,
+    transition,
+  },
 };
