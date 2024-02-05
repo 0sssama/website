@@ -1,2 +1,5 @@
+import dynamic from 'next/dynamic';
+
 export { default as StoryblokProvider } from './storyblok-provider';
-export { default as NprogressProvider } from './nprogress-provider';
+
+export const NprogressProvider = dynamic(() => import('./nprogress-provider'), { ssr: false });
