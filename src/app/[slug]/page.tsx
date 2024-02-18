@@ -11,7 +11,7 @@ export default async function Home({ params }: NextPageProps) {
   if (!page) notFound();
 
   return (
-    <main>
+    <main className="min-h-[300vh]">
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );
