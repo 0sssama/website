@@ -8,12 +8,15 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: '1rem',
+      padding: '1.25rem',
       screens: {
         lg: '768px',
       },
     },
     extend: {
+      dropShadow: {
+        '3xl': '10px 10px 45px rgba(255, 255, 255, 0.15)',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

@@ -10,7 +10,7 @@ export default async function HomePage() {
   if (!page) notFound();
 
   return (
-    <main className="min-h-[300vh]">
+    <main>
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );

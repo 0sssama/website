@@ -1,17 +1,19 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 
 import { getPageBySlug } from '@/base/services/storyblok';
-import type { NextPageProps } from '@/base/types/next';
 import { getPageMetadata } from '@/base/services/storyblok/utils/get-page-metadata';
 import { PageBuilder } from '@/components/templates/page-builder';
+import type { NextPageProps } from '@/base/types/next';
 
-export default async function Home({ params }: NextPageProps) {
+export default async function Page({ params }: NextPageProps) {
+  if (params.slug === 'home') redirect('/');
+
   const page = await getPageBySlug(params.slug);
 
   if (!page) notFound();
 
   return (
-    <main className="min-h-[300vh]">
+    <main>
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );

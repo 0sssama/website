@@ -8,6 +8,7 @@
     --foreground: 0 0% 98%;
 
     --text-gradient: linear-gradient(120deg, #fff, #adadad);
+    --text-gradient-inverted: linear-gradient(120deg, #18181b, #545151);
 
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -15,8 +16,8 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 240 6% 90%;
+    --primary-foreground: 240 6% 10%;
 
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
@@ -38,7 +39,7 @@
   }
 
   body {
-    @apply relative min-h-screen overflow-x-hidden bg-gradient-to-b from-zinc-900 to-black text-zinc-50;
+    @apply relative min-h-screen overflow-x-hidden bg-gradient-to-b from-zinc-900 to-black text-zinc-200;
   }
 }
 
@@ -53,8 +54,14 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .gradient-title-inverted {
+    background: var(--text-gradient-inverted);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   * {
-    @apply border-border font-sans text-zinc-50 transition-all duration-300 ease-in-out;
+    @apply border-border font-sans text-zinc-200 transition-all duration-300 ease-in-out;
   }
 
   h1,

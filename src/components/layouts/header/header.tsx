@@ -15,7 +15,12 @@ export default function Header({ navLinks, button }: HeaderProps) {
   const { isScrolled } = useScroll({ threshold: 20 });
 
   return (
-    <header className="fixed left-0 right-0 top-4 z-10 flex w-full items-center justify-center px-4 lg:top-6 lg:px-0">
+    <header
+      className={cn(
+        'fixed left-0 right-0 top-4 z-10 flex w-full items-center justify-center lg:top-6',
+        isScrolled && 'px-2',
+      )}
+    >
       <div
         className={cn(
           'container flex items-center justify-between rounded-full border border-transparent py-[10px]',
