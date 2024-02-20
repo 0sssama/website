@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 import type { NewsletterFormProps } from '../newsletter-cta.types';
 
-export default function NewsletterForm({ inputPlaceholder, inputNote, buttonText }: NewsletterFormProps) {
+export default function NewsletterForm({ inputPlaceholder, buttonText }: NewsletterFormProps) {
   const [email, setEmail] = useState('');
 
   return (
@@ -20,9 +20,6 @@ export default function NewsletterForm({ inputPlaceholder, inputNote, buttonText
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        {inputNote && (
-          <p className="absolute bottom-0 left-3 translate-y-full text-[10px] text-zinc-600">{inputNote}</p>
-        )}
       </div>
       <Button variant="inverted" className="max-md:w-full">
         {buttonText || 'Subscribe'} &rarr;
