@@ -6,7 +6,12 @@ import type { HeroProps } from './hero.types';
 
 export default function Hero({ heading, description, buttons, className }: HeroProps) {
   return (
-    <div className={cn('container flex flex-col items-center justify-center py-28 md:py-40 md:text-center', className)}>
+    <div
+      className={cn(
+        'container flex flex-col items-center justify-center pb-10 pt-28 md:pb-24 md:pt-40 md:text-center',
+        className,
+      )}
+    >
       <h1 className="gradient-title text-4xl md:text-6xl md:!leading-[75px]">{heading}</h1>
       <div className="mb-8 mt-6 md:max-w-[75%]">
         <Markdown className="font-light !leading-none *:text-base *:!text-zinc-300" content={description} />

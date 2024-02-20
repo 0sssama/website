@@ -10,7 +10,7 @@ export default async function HomePage() {
   if (!page) notFound();
 
   return (
-    <main>
+    <main className="flex flex-col gap-10">
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );

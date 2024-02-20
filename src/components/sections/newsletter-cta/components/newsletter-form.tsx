@@ -11,7 +11,7 @@ export default function NewsletterForm({ inputPlaceholder, buttonText }: Newslet
   const [email, setEmail] = useState('');
 
   return (
-    <form className="flex w-full items-center justify-center gap-6 max-md:flex-col md:gap-2">
+    <form className="flex w-full items-center justify-center gap-4 max-md:flex-col md:gap-2">
       <div className="relative flex flex-col max-md:w-full md:min-w-[280px]">
         <Input
           type="email"

@@ -12,6 +12,7 @@ export const componentsRegistry: Record<string, ReactComponentType<any>> = {
   // SECTIONS
   hero: dynamic(() => import('@/components/sections/hero/hero')),
   newsletter_cta: dynamic(() => import('@/components/sections/newsletter-cta/newsletter-cta')),
+  call_to_action: dynamic(() => import('@/components/sections/call-to-action/call-to-action')),
 };
 
 export type ComponentType = keyof typeof componentsRegistry;
