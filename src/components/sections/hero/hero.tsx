@@ -13,7 +13,7 @@ export default function Hero({ heading, description, buttons, className }: HeroP
       )}
     >
       <h1 className="gradient-title text-4xl md:text-6xl md:!leading-[75px]">{heading}</h1>
-      <div className="mb-8 mt-6 md:max-w-[75%]">
+      <div className="mb-8 mt-6 md:max-w-[80%]">
         <Markdown className="font-light !leading-none *:text-base *:!text-zinc-300" content={description} />
       </div>
       <div className="flex w-full items-center gap-2 md:justify-center md:gap-4">

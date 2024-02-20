@@ -1,12 +1,12 @@
 import type { ButtonModel } from '@/components/ui/button';
 
 export interface CallToActionProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 
-  buttons: ButtonModel[];
+  buttons?: ButtonModel[];
 }
 
 export interface ListButtonsProps {
-  buttons: ButtonModel[];
+  buttons?: ButtonModel[];
 }

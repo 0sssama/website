@@ -3,9 +3,10 @@ import type { ComponentType as ReactComponentType } from 'react';
 
 import type { MarkdownProps } from '@/components/organisms/markdown';
 import type { HeroProps } from '@/components/sections/hero';
+import type { NewsletterCTAProps } from '@/components/sections/newsletter-cta';
+import type { CallToActionProps } from '@/components/sections/call-to-action';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const componentsRegistry: Record<string, ReactComponentType<any>> = {
+export const componentsRegistry: Record<string, ReactComponentType<ComponentProps>> = {
   // ORGANISMS
   markdown: dynamic(() => import('@/components/organisms/markdown/markdown')),
 
@@ -17,4 +18,4 @@ export const componentsRegistry: Record<string, ReactComponentType<any>> = {
 
 export type ComponentType = keyof typeof componentsRegistry;
 
-export type ComponentProps = MarkdownProps & HeroProps;
+export type ComponentProps = MarkdownProps & HeroProps & NewsletterCTAProps & CallToActionProps;
