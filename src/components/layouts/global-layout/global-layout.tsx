@@ -7,12 +7,15 @@ import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
 import { NprogressProvider, StoryblokProvider } from '@/base/providers';
 import { getPageBySlug } from '@/base/services/storyblok';
 
+import { Footer } from '../footer';
+
 import type { GlobalLayoutProps } from './global-layout.types';
 
 export default async function GlobalLayout({ children }: GlobalLayoutProps) {
   const layout = await getPageBySlug('layout');
 
   const header = layout?.header?.[0];
+  const footer = layout?.footer?.[0];
 
   return (
     <StoryblokProvider>
@@ -20,6 +23,7 @@ export default async function GlobalLayout({ children }: GlobalLayoutProps) {
         <body className={clsx(dmSansFont.variable, calSansFont.variable)}>
           {header && <Header {...header} />}
           <NprogressProvider>{children}</NprogressProvider>
+          {footer && <Footer {...footer} />}
           <Analytics />
           <SpeedInsights />
         </body>

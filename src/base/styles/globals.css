@@ -61,7 +61,7 @@
   }
 
   * {
-    @apply border-border font-sans text-zinc-200 transition-all duration-300 ease-in-out;
+    @apply scroll-smooth border-border font-sans text-zinc-200 transition-all duration-300 ease-in-out;
   }
 
   h1,

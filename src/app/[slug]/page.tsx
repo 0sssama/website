@@ -13,7 +13,7 @@ export default async function Page({ params }: NextPageProps) {
   if (!page) notFound();
 
   return (
-    <main className="flex flex-col gap-10">
+    <main className="flex min-h-[800px] flex-col gap-10">
       <PageBuilder sections={page.sections ?? []} />
     </main>
   );

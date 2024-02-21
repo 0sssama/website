@@ -6,7 +6,7 @@ import type { HeroProps } from './hero.types';
 
 export default function Hero({ heading, description, buttons, className }: HeroProps) {
   return (
-    <div
+    <section
       className={cn(
         'container flex flex-col items-center justify-center pb-10 pt-28 md:pb-24 md:pt-40 md:text-center',
         className,
@@ -19,7 +19,7 @@ export default function Hero({ heading, description, buttons, className }: HeroP
       <div className="flex w-full items-center gap-2 md:justify-center md:gap-4">
         {Array.isArray(buttons) && buttons.map((button, index) => <Button key={index} {...button} />)}
       </div>
-      <div className="pointer-events-none absolute left-0 right-0 top-0 z-[-1] h-[150vh] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-    </div>
+      <div className="pointer-events-none absolute left-0 right-0 top-0 z-[-1] h-screen bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:2.5rem_2.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+    </section>
   );
 }
