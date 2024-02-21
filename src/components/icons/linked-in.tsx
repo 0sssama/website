@@ -1,7 +1,7 @@
 import { IconBase, type IconComponent } from '@/components/atoms/icon-base';
 
 const LinkedIn: IconComponent = (props) => (
-  <IconBase viewBox="0 0 24 24" {...props}>
+  <IconBase width="24" height="24" viewBox="0 0 24 24" {...props}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

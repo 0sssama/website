@@ -23,7 +23,7 @@ export default function Header({ navLinks, button }: HeaderProps) {
     >
       <div
         className={cn(
-          'container flex items-center justify-between rounded-full border border-transparent py-[10px]',
+          'container flex items-center justify-between rounded-full border border-transparent py-3',
           isScrolled && 'border-border bg-background/85 backdrop-blur',
         )}
       >

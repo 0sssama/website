@@ -1,7 +1,9 @@
+import type { SocialMediaLinkModel } from '@/components/molecules/social-media-link';
+
 export interface FooterModel {
   description?: string;
   copyrightText?: string;
-  socialMediaLinks?: unknown[];
+  socialMediaLinks?: SocialMediaLinkModel[];
   includeLocalTime?: boolean;
 }
 

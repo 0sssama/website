@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import { Link } from '@/components/atoms/link';
 import { HOME_ROUTE } from '@/base/config/routes.config';
+import { SocialMediaLink } from '@/components/molecules/social-media-link';
 import logo from '@/assets/images/logo.svg';
 
 import LocalTime from './components/local-time';
@@ -9,7 +10,7 @@ import type { FooterProps } from './footer.types';
 
 export default function Footer({ description, copyrightText, includeLocalTime, socialMediaLinks }: FooterProps) {
   return (
-    <footer className="container relative flex w-full flex-col items-center overflow-hidden rounded-t-xl border border-b-0 border-zinc-900 py-16 md:px-8">
+    <footer className="container relative flex w-full flex-col items-center overflow-hidden rounded-t-xl border border-b-0 border-t-0 border-zinc-900 py-16 md:px-8">
       <div className="flex w-full flex-col items-center md:flex-row md:items-end md:justify-between">
         <div className="flex flex-col max-md:mb-8 max-md:items-center">
           <Link href={{ url: HOME_ROUTE }} className="mb-4 hover:opacity-80">
@@ -19,10 +20,11 @@ export default function Footer({ description, copyrightText, includeLocalTime, s
             <p className="max-w-[240px] text-sm font-medium text-zinc-400 max-md:text-center">{description}</p>
           )}
         </div>
-        <div>
-          <p className="mb-6 text-center text-xs text-zinc-500 md:text-right">
-            Social media here ({socialMediaLinks?.length})
-          </p>
+        <div className="flex flex-col items-center md:items-end">
+          <div className="mb-4 flex items-center gap-2">
+            {Array.isArray(socialMediaLinks) &&
+              socialMediaLinks.map((link, index) => <SocialMediaLink {...link} key={index} />)}
+          </div>
           {includeLocalTime && <LocalTime />}
         </div>
       </div>
