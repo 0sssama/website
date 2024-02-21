@@ -15,5 +15,5 @@ export default function LocalTime() {
     return () => clearInterval(interval);
   }, []);
 
-  return <p className="text-center text-xs text-zinc-500 md:text-right">Local Current Time: {time ?? ''}</p>;
+  return <p className="text-center text-xs text-zinc-500 md:text-right">Local Current Time: {time}</p>;
 }
