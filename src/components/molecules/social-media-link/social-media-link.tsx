@@ -4,9 +4,9 @@ import { Icon } from '@/components/atoms/icon';
 import type { SocialMediaLinkProps } from './social-media-link.types';
 
 export default function SocialMediaLink({ link, icon }: SocialMediaLinkProps) {
-  if (!link || link.length === 0 || !icon) return null;
+  if (!link || !icon) return null;
 
-  const { href, label } = link[0];
+  const { href, label } = link[0] || {};
 
   if (!href || !label) return null;
 
