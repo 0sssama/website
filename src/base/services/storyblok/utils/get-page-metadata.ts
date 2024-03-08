@@ -23,6 +23,10 @@ export const getPageMetadata = async (slug: string): Promise<Metadata> => {
       nocache: !seo.noIndex,
     },
 
+    alternates: {
+      canonical: slug === 'home' ? process.env.NEXT_PUBLIC_SITE_URL : `${process.env.NEXT_PUBLIC_SITE_URL}/${slug}`,
+    },
+
     openGraph: {
       title: seo.title,
       description: seo.description,

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://new.labrahmi.me'),
   authors: [{ name: 'XO Software', url: 'https://www.xo.software/' }],
   alternates: {
-    canonical: '/',
+    canonical: 'https://new.labrahmi.me/',
   },
   keywords: [
     'software',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Turning ideas into seamless and blazing-fast products.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: 'https://new.labrahmi.me/images/og-image.jpg',
         alt: 'Labrahmi.me',
         type: 'image/jpeg',
         width: 1200,
