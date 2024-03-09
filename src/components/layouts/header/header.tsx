@@ -29,7 +29,7 @@ export default function Header({ navLinks, button }: HeaderProps) {
       >
         <div className="flex-1">
           <Link href={{ url: HOME_ROUTE }} className="hover:opacity-80">
-            <Image src={logo} alt="Labrahmi Logo" width={42} height={39} className="pointer-events-none" />
+            <Image src={logo} alt="Labrahmi Logo" width={42} height={39} className="pointer-events-none" priority />
           </Link>
         </div>
         <nav className="max-md:hidden">
