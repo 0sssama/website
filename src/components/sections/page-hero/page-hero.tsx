@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 import type { PageHeroProps } from './page-hero.types';
 
-export default function PageHeroSection({ title, description, buttons }: PageHeroProps) {
+export default function PageHero({ title, description, buttons }: PageHeroProps) {
   return (
     <section className="relative w-full pb-8 pt-28 md:pb-16 md:pt-40">
       <div className="container">
