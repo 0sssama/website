@@ -16,7 +16,7 @@ export default function NewsletterCTA({
             {title}
           </h1>
         )}
-        {description && <p className="mb-6 text-zinc-500 md:max-w-[60%] md:text-center">{description}</p>}
+        {description && <p className="mb-6 text-zinc-600 md:max-w-[60%] md:text-center">{description}</p>}
         <NewsletterForm inputPlaceholder={inputPlaceholder} buttonText={buttonText} />
         {bottomNote && <p className="mt-6 text-center text-xs text-zinc-600 md:mt-14">{bottomNote}</p>}
         <div className="pointer-events-none absolute -top-20 bottom-0 left-0 right-0 z-[-1] rotate-180 bg-[linear-gradient(to_right,#a1a1aa_1px,transparent_1px),linear-gradient(to_bottom,#a1a1aa_1px,transparent_1px)] bg-[size:2.66rem_2.66rem] opacity-20 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
