@@ -32,11 +32,15 @@ export const getPageMetadata = async (slug: string): Promise<Metadata> => {
       description: seo.description,
       url: process.env.NEXT_PUBLIC_SITE_URL,
       siteName: 'Labrahmi',
-      image: {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-image.jpg`,
-        width: 1200,
-        height: 630,
-      },
+      images: [
+        {
+          url: `https://new.labrahmi.me/images/og-image.jpg`,
+          alt: 'Labrahmi.me',
+          type: 'image/jpeg',
+          width: 1200,
+          height: 630,
+        },
+      ],
       locale: 'en_US',
       type: seo.ogType || 'website',
     },
