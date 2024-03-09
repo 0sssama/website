@@ -34,7 +34,7 @@ export const getPageMetadata = async (slug: string): Promise<Metadata> => {
       siteName: 'Labrahmi',
       images: [
         {
-          url: `https://new.labrahmi.me/images/og-image.jpg`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-image.jpg`,
           alt: 'Labrahmi.me',
           type: 'image/jpeg',
           width: 1200,
