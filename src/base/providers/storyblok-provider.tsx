@@ -1,5 +1,3 @@
-'use client';
-
 import type { ReactNode } from 'react';
 
 import { initStoryblok } from '@/base/services/storyblok/api';
