@@ -7,9 +7,13 @@ export const getAllPages = async () => {
   const sbApi = storyblokApi();
 
   try {
-    return await sbApi.getStories({ version });
+    const pages = await sbApi.getStories({ version });
+
+    if (!pages) return [];
+
+    return pages.data.stories;
   } catch {
     console.error('Error getting all storyblok pages.');
-    return null;
+    return [];
   }
 };

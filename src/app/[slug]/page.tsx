@@ -1,7 +1,6 @@
 import { notFound, redirect } from 'next/navigation';
 
-import { getPageBySlug } from '@/base/services/storyblok';
-import { getPageMetadata } from '@/base/services/storyblok/utils/get-page-metadata';
+import { getAllPages, getPageBySlug, getPageMetadata } from '@/base/services/storyblok';
 import { PageBuilder } from '@/components/templates/page-builder';
 import type { NextPageProps } from '@/base/types/next';
 
@@ -20,5 +19,17 @@ export default async function Page({ params }: NextPageProps) {
 }
 
 export async function generateMetadata({ params }: NextPageProps) {
-  return getPageMetadata(params.slug);
+  return await getPageMetadata(params.slug);
+}
+
+export async function generateStaticParams() {
+  const pages = await getAllPages();
+
+  return pages.map((page) => {
+    if (page.slug === 'home' || page.slug === 'layout') return;
+
+    return {
+      slug: page.slug,
+    };
+  });
 }
