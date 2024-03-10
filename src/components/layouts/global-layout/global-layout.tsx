@@ -4,25 +4,19 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Header } from '@/components/layouts/header';
 import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
-import { NprogressProvider, StoryblokProvider } from '@/base/providers';
-import { getPageBySlug } from '@/base/services/storyblok';
+import { StoryblokProvider } from '@/base/providers';
 
 import { Footer } from '../footer';
 
 import type { GlobalLayoutProps } from './global-layout.types';
 
-export default async function GlobalLayout({ children }: GlobalLayoutProps) {
-  const layout = await getPageBySlug('layout');
-
-  const header = layout?.header?.[0];
-  const footer = layout?.footer?.[0];
-
+export default async function GlobalLayout({ children, header, footer }: GlobalLayoutProps) {
   return (
     <StoryblokProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={clsx(dmSansFont.variable, calSansFont.variable)}>
           {header && <Header {...header} />}
-          <NprogressProvider>{children}</NprogressProvider>
+          {children}
           {footer && <Footer {...footer} />}
           <Analytics />
           <SpeedInsights />
