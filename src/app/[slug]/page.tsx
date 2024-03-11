@@ -26,8 +26,7 @@ export async function generateStaticParams() {
   const pages = await getAllPages();
 
   return pages.map((page) => {
-    if (page.slug === 'home' || page.slug === 'layout') return;
-
+    if (page.slug === 'home') return;
     return {
       slug: page.slug,
     };

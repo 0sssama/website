@@ -4,7 +4,7 @@ import type { PageHeroProps } from './page-hero.types';
 
 export default function PageHero({ title, description, buttons }: PageHeroProps) {
   return (
-    <section className="relative w-full pb-8 pt-28 md:pb-16 md:pt-40">
+    <section className="relative w-full pb-4 pt-32 md:pb-8 md:pt-40">
       <div className="container">
         <h1 className="gradient-title text-3xl max-md:mb-2 md:text-4xl md:leading-[75px]">{title}</h1>
         <p className="text-sm font-light text-zinc-300 md:max-w-[80%]">{description}</p>

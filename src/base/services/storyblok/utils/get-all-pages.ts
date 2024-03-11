@@ -7,7 +7,7 @@ export const getAllPages = async () => {
   const sbApi = storyblokApi();
 
   try {
-    const pages = await sbApi.getStories({ version });
+    const pages = await sbApi.getStories({ version, content_type: 'page' });
 
     if (!pages) return [];
 
