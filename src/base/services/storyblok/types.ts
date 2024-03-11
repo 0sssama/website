@@ -3,6 +3,7 @@ import type { ISbStoryData } from '@storyblok/react';
 import type { SectionModel } from '@/base/types/page';
 import type { FooterModel } from '@/components/layouts/footer';
 import type { HeaderModel } from '@/components/layouts/header';
+import type { ImageModel } from '@/base/types/image';
 
 export interface SbStoryData<T> extends ISbStoryData<T> {
   _uid: string;
@@ -29,4 +30,5 @@ export interface SbBlogPostData {
   component: 'blog_post';
   title?: string;
   excerpt?: string;
+  image?: ImageModel;
 }

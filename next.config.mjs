@@ -5,6 +5,16 @@ const nextConfig = {
       fullUrl: true,
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'a.storyblok.com',
+        port: '',
+        pathname: '/f/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
