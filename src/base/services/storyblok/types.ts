@@ -5,6 +5,7 @@ import type { HeaderModel } from '@/components/layouts/header';
 export interface ISbStoryData {
   _uid: string;
   _editable: string;
+  component: 'page' | 'layout' | 'blog_post';
 }
 
 export interface SeoModel extends ISbStoryData {
@@ -20,4 +21,10 @@ export interface SbPageData extends ISbStoryData {
   header?: HeaderModel[];
   footer?: FooterModel[];
   component: 'page' | 'layout';
+}
+
+export interface SbBlogPostData extends ISbStoryData {
+  component: 'blog_post';
+  title?: string;
+  excerpt?: string;
 }
