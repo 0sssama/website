@@ -1,21 +1,23 @@
+import type { ISbStoryData } from '@storyblok/react';
+
 import type { SectionModel } from '@/base/types/page';
 import type { FooterModel } from '@/components/layouts/footer';
 import type { HeaderModel } from '@/components/layouts/header';
 
-export interface ISbStoryData {
+export interface SbStoryData<T> extends ISbStoryData<T> {
   _uid: string;
   _editable: string;
   component: 'page' | 'layout' | 'blog_post';
 }
 
-export interface SeoModel extends ISbStoryData {
+export interface SeoModel {
   title?: string;
   description?: string;
   noIndex?: boolean;
   ogType?: 'website' | 'article';
 }
 
-export interface SbPageData extends ISbStoryData {
+export interface SbPageData {
   seo?: SeoModel[];
   sections?: SectionModel[];
   header?: HeaderModel[];
@@ -23,7 +25,7 @@ export interface SbPageData extends ISbStoryData {
   component: 'page' | 'layout';
 }
 
-export interface SbBlogPostData extends ISbStoryData {
+export interface SbBlogPostData {
   component: 'blog_post';
   title?: string;
   excerpt?: string;

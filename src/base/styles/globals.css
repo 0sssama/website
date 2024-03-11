@@ -39,7 +39,7 @@
   }
 
   body {
-    @apply relative min-h-screen overflow-x-hidden bg-zinc-900 bg-gradient-to-b from-zinc-900 to-black text-zinc-200;
+    @apply relative min-h-screen overflow-x-hidden bg-zinc-800 bg-gradient-to-b from-zinc-900 to-zinc-950 text-zinc-200;
   }
 }
 
