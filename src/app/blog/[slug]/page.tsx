@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 
 import { getAllBlogPosts, getBlogPostBySlug } from '@/base/services/storyblok';
+import { Markdown } from '@/components/organisms/markdown';
 import type { NextPageProps } from '@/base/types/next';
 
 export default async function BlogPost({ params }: NextPageProps) {
@@ -9,9 +10,10 @@ export default async function BlogPost({ params }: NextPageProps) {
   if (!post) notFound();
 
   return (
-    <main className="container flex flex-col items-center justify-center py-40">
-      <h1>{post.title}</h1>
-      <p>{post.excerpt}</p>
+    <main className="w-full">
+      <article className="container my-16">
+        <Markdown content={post.content} />
+      </article>
     </main>
   );
 }
@@ -25,7 +27,7 @@ export async function generateStaticParams() {
 
   return posts.map((post) => {
     return {
-      slug: `blog/${post.slug}`,
+      slug: post.slug,
     };
   });
 }
