@@ -31,4 +31,5 @@ export interface SbBlogPostData {
   title?: string;
   excerpt?: string;
   image?: ImageModel;
+  content?: string;
 }

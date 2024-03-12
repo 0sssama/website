@@ -16,6 +16,7 @@ const config = {
     extend: {
       dropShadow: {
         '3xl': '10px 10px 45px rgba(255, 255, 255, 0.15)',
+        border: '0 0 4px rgba(100, 100, 100, 0.05)',
       },
       colors: {
         border: 'hsl(var(--border))',
