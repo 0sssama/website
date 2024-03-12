@@ -10,7 +10,7 @@ import type { FooterProps } from './footer.types';
 
 export default function Footer({ description, copyrightText, includeLocalTime, socialMediaLinks }: FooterProps) {
   return (
-    <footer className="container relative flex w-full flex-col items-center overflow-hidden rounded-t-xl border border-b-0 border-t-0 border-zinc-900 py-16 max-md:border-0 md:px-8">
+    <footer className="container relative flex w-full flex-col items-center overflow-hidden border border-b-0 border-t-0 border-zinc-900 py-16 max-md:border-0 md:rounded-t-xl md:px-8">
       <div className="flex w-full flex-col items-center md:flex-row md:items-end md:justify-between">
         <div className="flex flex-col max-md:mb-8 max-md:items-center">
           <Link href={{ url: HOME_ROUTE }} className="mb-4 hover:opacity-80">
