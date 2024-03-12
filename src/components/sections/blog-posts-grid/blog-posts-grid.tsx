@@ -1,6 +1,6 @@
 import { cn } from '@/base/utils/cn';
 import { getAllBlogPosts } from '@/base/services/storyblok';
-import { Link } from '@/components/atoms/link';
+import { BlogPostCard } from '@/components/molecules/blog-post-card';
 
 import type { BlogPostsGridProps } from './blog-posts-grid.types';
 
@@ -8,18 +8,11 @@ export default async function BlogPostsGrid({ title, className }: BlogPostsGridP
   const posts = await getAllBlogPosts();
 
   return (
-    <section className={cn(className, 'container flex flex-col items-center gap-10')}>
+    <section className={cn(className, 'container flex w-full flex-col items-center gap-10 md:p-0')}>
       {title && <h1>{title}</h1>}
-      <div className="grid w-full grid-cols-2">
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            className="flex flex-col gap-4 rounded border border-border p-4 hover:bg-zinc-900"
-            href={{ url: `/${post.full_slug}` }}
-          >
-            <h2>{post.content.title}</h2>
-            <p className="line-clamp-3">{post.content.excerpt}</p>
-          </Link>
+      <div className="mb-14 grid w-full gap-x-4 gap-y-6 md:grid-cols-2">
+        {[...posts, ...posts, ...posts].map((post) => (
+          <BlogPostCard key={post.id} post={post.content} createdAt={post.created_at} fullSlug={post.full_slug} />
         ))}
       </div>
     </section>
