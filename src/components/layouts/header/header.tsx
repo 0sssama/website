@@ -34,7 +34,11 @@ export default function Header({ navLinks, button }: HeaderProps) {
         </div>
         <nav className="max-md:hidden">
           {navLinks.map((item, index) => (
-            <Link key={index} href={item.href} className="p-3 text-sm mix-blend-difference hover:opacity-80">
+            <Link
+              key={index}
+              href={{ url: `/${item.href?.cached_url}` }}
+              className="p-3 text-sm mix-blend-difference hover:opacity-80"
+            >
               {item.label}
             </Link>
           ))}
