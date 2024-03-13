@@ -1,15 +1,12 @@
 import { notFound } from 'next/navigation';
 
-import { getAllBlogPosts, getBlogPostBySlug } from '@/base/services/storyblok';
+import { getAllBlogPosts, getBlogPostBySlug, getBlogPostMetadata } from '@/base/services/storyblok';
 import { Markdown } from '@/components/organisms/markdown';
 import { BlogPostHero } from '@/components/sections/blog-post-hero';
 import type { NextPageProps } from '@/base/types/next';
-import { getBlogPostMetadata } from '@/base/services/storyblok/utils/get-blog-post-metadata';
 
 export default async function BlogPost({ params }: NextPageProps) {
   const post = await getBlogPostBySlug(params.slug);
-
-  console.log(params.slug);
 
   if (!post) notFound();
 
