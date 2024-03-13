@@ -16,6 +16,7 @@ export interface SeoModel {
   description?: string;
   noIndex?: boolean;
   ogType?: 'website' | 'article';
+  ogImage?: ImageModel;
 }
 
 export interface SbPageData {
@@ -33,4 +34,5 @@ export interface SbBlogPostData {
   excerpt?: string;
   image?: ImageModel;
   content?: string;
+  seo?: SeoModel[];
 }
