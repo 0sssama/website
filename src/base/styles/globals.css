@@ -39,7 +39,7 @@
   }
 
   body {
-    @apply relative min-h-screen overflow-x-hidden bg-zinc-900 bg-gradient-to-b from-zinc-900 to-zinc-950 bg-cover text-zinc-200;
+    @apply relative min-h-screen overflow-x-hidden bg-zinc-900 bg-gradient-to-b from-zinc-900 to-zinc-950 bg-cover font-sans text-zinc-200;
   }
 
   main {
@@ -65,7 +65,7 @@
   }
 
   * {
-    @apply scroll-smooth font-sans text-zinc-200 transition-all duration-300 ease-in-out;
+    @apply scroll-smooth text-zinc-200 transition-all duration-300 ease-in-out;
   }
 
   h1,

@@ -74,8 +74,9 @@ const config = {
       },
     },
     fontFamily: {
-      serif: ['var(--font-cal-sans)', ...defaultTheme.fontFamily.sans],
-      sans: ['var(--font-dm-sans)', ...defaultTheme.fontFamily.mono],
+      serif: ['var(--font-cal-sans)', ...defaultTheme.fontFamily.serif],
+      sans: ['var(--font-dm-sans)', ...defaultTheme.fontFamily.sans],
+      mono: defaultTheme.fontFamily.mono,
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
