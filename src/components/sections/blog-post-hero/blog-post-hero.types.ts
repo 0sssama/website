@@ -1,7 +1,6 @@
 import type { SbBlogPostData } from '@/base/services/storyblok';
 
-export interface BlogPostCardProps {
+export interface BlogPostHeroProps {
   post: SbBlogPostData;
-  fullSlug: string;
-  className?: string;
+  createdAt: string;
 }

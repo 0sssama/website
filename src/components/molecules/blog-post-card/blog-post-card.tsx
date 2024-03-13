@@ -7,8 +7,8 @@ import { contentReadTime } from '@/base/utils/content-read-time';
 
 import type { BlogPostCardProps } from './blog-post-card.types';
 
-export default function BlogPostCard({ post, createdAt, fullSlug, className }: BlogPostCardProps) {
-  const formattedDate = formatDate(createdAt);
+export default function BlogPostCard({ post, fullSlug, className }: BlogPostCardProps) {
+  const formattedDate = formatDate(post.createdAt);
   const readTime = contentReadTime(post.content || '');
 
   return (
@@ -19,12 +19,10 @@ export default function BlogPostCard({ post, createdAt, fullSlug, className }: B
       )}
       href={{ url: `/${fullSlug}` }}
     >
-      {post.image && (
-        <div className="relative max-h-[250px] min-h-[210px] border-b border-b-border *:object-cover">
-          <Image image={post.image} fill />
-        </div>
-      )}
-      <div className="flex flex-col gap-2 p-4">
+      <div className="relative max-h-[250px] min-h-[210px] border-b border-b-border bg-border">
+        {post.image && <Image image={post.image} fill />}
+      </div>
+      <div className="flex flex-col gap-2 px-4 py-6">
         <p className="text-xs text-zinc-500">
           {formattedDate} • {readTime} min read
         </p>

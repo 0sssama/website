@@ -28,7 +28,8 @@ export interface SbPageData {
 
 export interface SbBlogPostData {
   component: 'blog_post';
-  title?: string;
+  title: string;
+  createdAt: string;
   excerpt?: string;
   image?: ImageModel;
   content?: string;
