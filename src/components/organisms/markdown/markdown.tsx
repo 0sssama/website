@@ -13,7 +13,12 @@ export default function Markdown({ className, content, ...props }: MarkdownProps
   return (
     <div
       className={clsx(
-        'prose prose-zinc prose-invert lg:prose-base prose-code:rounded-xl prose-img:w-full prose-img:cursor-pointer prose-img:rounded-xl prose-img:object-cover',
+        'prose prose-zinc prose-invert lg:prose-base',
+        // rounded styles
+        'prose-code:rounded-xl prose-img:rounded-xl',
+        // image styles
+        'prose-img:relative prose-img:w-full prose-img:cursor-pointer prose-img:overflow-hidden prose-img:object-cover',
+        'prose-img:bg-gradient-to-r prose-img:from-zinc-800/50 prose-img:via-zinc-800 prose-img:to-zinc-800/50',
         className,
       )}
     >
