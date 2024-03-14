@@ -4,7 +4,6 @@ import { getAllBlogPosts, getBlogPostBySlug, getBlogPostMetadata } from '@/base/
 import { Markdown } from '@/components/organisms/markdown';
 import { BlogPostHero } from '@/components/sections/blog-post-hero';
 import type { NextPageProps } from '@/base/types/next';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default async function BlogPost({ params }: NextPageProps) {
   const post = await getBlogPostBySlug(params.slug);
@@ -19,18 +18,6 @@ export default async function BlogPost({ params }: NextPageProps) {
       <article className="container relative my-16">
         <Markdown content={post.content} />
       </article>
-      <div className="relative">
-        <TooltipProvider delayDuration={100}>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button>Hello</button>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" align="center">
-              <p>hello world</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-      </div>
     </>
   );
 }
