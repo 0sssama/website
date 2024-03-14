@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 
-import { Icon } from '@/components/atoms/icon';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import getNodeInnerText from '@/base/utils/get-node-inner-text';
+import { Icon } from '@/components/atoms/icon';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip/tooltip';
 import { cn } from '@/base/utils/cn';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
