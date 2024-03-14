@@ -5,5 +5,6 @@ export const formatLocalTime = (date?: Date | string): string => {
     second: '2-digit',
     minute: '2-digit',
     hour: '2-digit',
+    timeZone: 'Africa/Casablanca',
   });
 };
