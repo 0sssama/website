@@ -17,7 +17,7 @@ export default function Header({ navLinks, button }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed left-0 right-0 top-4 z-10 flex w-full items-center justify-center lg:top-6',
+        'fixed left-0 right-0 top-4 z-50 flex w-full items-center justify-center lg:top-6',
         isScrolled && 'px-2',
       )}
     >

@@ -17,7 +17,7 @@ export default function Image({ image, ...props }: ImageProps) {
   return (
     <NextImage
       src={filename}
-      alt={alt || title}
+      alt={alt || title || ''}
       {...(!fill && dimensions)}
       className={cn('pointer-events-none', fill && 'object-cover', className)}
       {...props}

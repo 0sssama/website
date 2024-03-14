@@ -76,4 +76,9 @@
   h6 {
     @apply font-serif;
   }
+
+  [data-radix-popper-content-wrapper],
+  [data-radix-popper-content-wrapper] * {
+    @apply transition-none;
+  }
 }

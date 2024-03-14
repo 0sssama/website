@@ -13,4 +13,12 @@ export const iconsRegistry = {
     title: 'GitHub',
     component: dynamic(() => import(`./github`)),
   },
+  Copy: {
+    title: 'Copy',
+    component: dynamic(() => import(`./copy`)),
+  },
+  Check: {
+    title: 'Check',
+    component: dynamic(() => import(`./check`)),
+  },
 };
