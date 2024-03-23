@@ -11,6 +11,8 @@
     "run-preview": "local-ssl-proxy --source 3010 --target 3000 --cert ~/localhost.pem --key ~/localhost-key.pem"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.3.4",
+    "@radix-ui/react-label": "2.0.2",
     "@radix-ui/react-slot": "1.0.2",
     "@radix-ui/react-tooltip": "1.0.7",
     "@storyblok/react": "3.0.8",
@@ -18,15 +20,18 @@
     "@vercel/speed-insights": "1.0.9",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
+    "lodash": "4.17.21",
     "markdown-to-jsx": "7.4.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "7.51.1",
     "react-syntax-highlighter": "15.5.0",
     "resend": "3.2.0",
     "sharp": "0.33.2",
     "tailwind-merge": "2.2.1",
-    "tailwindcss-animate": "1.0.7"
+    "tailwindcss-animate": "1.0.7",
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "0.5.10",
