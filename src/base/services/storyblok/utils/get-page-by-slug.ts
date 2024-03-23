@@ -11,7 +11,7 @@ export const getPageBySlug = async (slug: string): Promise<SbPageData | null> =>
 
   const sbApi = storyblokApi();
   try {
-    const page = await sbApi.getStory(slug, { version });
+    const page = await sbApi.getStory(slug, { version }, { cache: 'no-store' });
 
     return page.data.story.content as SbPageData;
   } catch {

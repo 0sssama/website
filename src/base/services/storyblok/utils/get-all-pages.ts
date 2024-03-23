@@ -8,7 +8,7 @@ export const getAllPages = async (): Promise<SbStoryData<SbPageData>[]> => {
   const sbApi = storyblokApi();
 
   try {
-    const pages = await sbApi.getStories({ version, content_type: 'page' });
+    const pages = await sbApi.getStories({ version, content_type: 'page' }, { cache: 'no-store' });
 
     if (!pages) return [];
 

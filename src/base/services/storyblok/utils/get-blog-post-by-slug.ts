@@ -10,7 +10,7 @@ export const getBlogPostBySlug = async (slug: string): Promise<SbBlogPostData | 
 
   const sbApi = storyblokApi();
   try {
-    const post = await sbApi.getStory(`blog/${slug}`, { version });
+    const post = await sbApi.getStory(`blog/${slug}`, { version }, { cache: 'no-store' });
 
     return post.data.story.content as SbBlogPostData;
   } catch {

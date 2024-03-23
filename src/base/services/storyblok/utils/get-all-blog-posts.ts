@@ -9,7 +9,7 @@ export const getAllBlogPosts = async (): Promise<SbStoryData<SbBlogPostData>[]> 
   const sbApi = storyblokApi();
 
   try {
-    const posts = await sbApi.getStories({ version, content_type: 'blog_post' });
+    const posts = await sbApi.getStories({ version, content_type: 'blog_post' }, { cache: 'no-store' });
 
     if (!posts) return [];
 
