@@ -3,8 +3,8 @@
 import Image from 'next/image';
 
 import { HOME_ROUTE } from '@/base/config/routes.config';
-import { Button } from '@/components/ui/button/button';
-import { Link } from '@/components/atoms/link';
+import { Button } from '@/components/elements/button';
+import { Link } from '@/components/elements/link';
 import { useScroll } from '@/base/hooks/use-scroll';
 import { cn } from '@/base/utils/cn';
 import logo from '@/assets/images/logo.svg';

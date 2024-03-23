@@ -1,4 +1,4 @@
-import type { ButtonModel } from '@/components/ui/button';
+import type { ButtonModel } from '@/components/elements/button';
 
 export interface CallToActionProps {
   title?: string;

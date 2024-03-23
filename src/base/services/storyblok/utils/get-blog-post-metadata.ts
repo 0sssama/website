@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { metadata } from '@/app/layout';
-import { extractDimensions } from '@/components/atoms/image/helpers/extract-dimensions';
+import { extractDimensions } from '@/components/elements/image/helpers/extract-dimensions';
 
 import { getBlogPostBySlug } from './get-blog-post-by-slug';
 

@@ -1,6 +1,6 @@
 import { cn } from '@/base/utils/cn';
-import { Button } from '@/components/ui/button';
-import { Markdown } from '@/components/organisms/markdown';
+import { Button } from '@/components/elements/button';
+import { Markdown } from '@/components/molecules/markdown';
 
 import type { HeroProps } from './hero.types';
 

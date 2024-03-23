@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/components/elements/input';
+import { Button } from '@/components/elements/button';
 
 import type { NewsletterFormProps } from '../newsletter-cta.types';
 

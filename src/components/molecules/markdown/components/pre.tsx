@@ -3,8 +3,8 @@
 import { useState } from 'react';
 
 import getNodeInnerText from '@/base/utils/get-node-inner-text';
-import { Icon } from '@/components/atoms/icon';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip/tooltip';
+import { Icon } from '@/components/elements/icon';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/elements/tooltip';
 import { cn } from '@/base/utils/cn';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */

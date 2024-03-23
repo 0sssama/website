@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { cn } from '@/base/utils/cn';
-import { Link } from '@/components/atoms/link';
-import { Image } from '@/components/atoms/image';
+import { Link } from '@/components/elements/link';
+import { Image } from '@/components/elements/image';
 import { formatDate } from '@/base/utils/format-date';
 import { contentReadTime } from '@/base/utils/content-read-time';
 

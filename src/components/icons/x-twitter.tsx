@@ -1,4 +1,4 @@
-import { IconBase, type IconComponent } from '@/components/atoms/icon-base';
+import { IconBase, type IconComponent } from '@/components/elements/icon-base';
 
 const XTwitter: IconComponent = (props) => (
   <IconBase width="24" height="24" viewBox="0 0 24 24" {...props}>

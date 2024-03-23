@@ -1,5 +1,5 @@
-import { Link } from '@/components/atoms/link';
-import { Icon } from '@/components/atoms/icon';
+import { Link } from '@/components/elements/link';
+import { Icon } from '@/components/elements/icon';
 
 import type { SocialMediaLinkProps } from './social-media-link.types';
 

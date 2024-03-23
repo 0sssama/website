@@ -5,9 +5,9 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Header } from '@/components/layouts/header';
 import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
 import { StoryblokProvider } from '@/base/providers';
-import noise from '@/assets/images/noise.webp';
-import { Image } from '@/components/atoms/image';
+import { Image } from '@/components/elements/image';
 import { cn } from '@/base/utils/cn';
+import noise from '@/assets/images/noise.webp';
 
 import { Footer } from '../footer';
 

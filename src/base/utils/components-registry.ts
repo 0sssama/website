@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import type { ComponentType as ReactComponentType } from 'react';
 
-import type { MarkdownProps } from '@/components/organisms/markdown';
+import type { MarkdownProps } from '@/components/molecules/markdown';
 import type { HeroProps } from '@/components/sections/hero';
 import type { NewsletterCTAProps } from '@/components/sections/newsletter-cta';
 import type { CallToActionProps } from '@/components/sections/call-to-action';
@@ -9,8 +9,8 @@ import type { PageHeroProps } from '@/components/sections/page-hero';
 import type { BlogPostsGridProps } from '@/components/sections/blog-posts-grid';
 
 export const componentsRegistry: Record<string, ReactComponentType<ComponentProps>> = {
-  // ORGANISMS
-  markdown: dynamic(() => import('@/components/organisms/markdown/markdown')),
+  // MOLECULES
+  markdown: dynamic(() => import('@/components/molecules/markdown/markdown')),
 
   // SECTIONS
   hero: dynamic(() => import('@/components/sections/hero/hero')),

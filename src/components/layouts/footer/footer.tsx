@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Link } from '@/components/atoms/link';
+import { Link } from '@/components/elements/link';
 import { HOME_ROUTE } from '@/base/config/routes.config';
 import { SocialMediaLink } from '@/components/molecules/social-media-link';
 import logo from '@/assets/images/logo.svg';

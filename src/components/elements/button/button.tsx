@@ -2,7 +2,7 @@ import * as React from 'react';
 import { cva } from 'class-variance-authority';
 
 import { cn } from '@/base/utils/cn';
-import { Link } from '@/components/atoms/link';
+import { Link } from '@/components/elements/link';
 
 import type { ButtonProps } from './button.types';
 

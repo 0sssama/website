@@ -1,5 +1,5 @@
 import type { LinkModel } from '@/base/types/link';
-import type { IconVariant } from '@/components/atoms/icon-base';
+import type { IconVariant } from '@/components/elements/icon-base';
 
 export interface SocialMediaLinkModel {
   link?: LinkModel[];

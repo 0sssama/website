@@ -1,4 +1,4 @@
-import { IconBase, type IconComponent } from '@/components/atoms/icon-base';
+import { IconBase, type IconComponent } from '@/components/elements/icon-base';
 
 const Copy: IconComponent = (props) => (
   <IconBase
