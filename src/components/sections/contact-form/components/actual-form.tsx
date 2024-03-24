@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/elements/input';
 import { Textarea } from '@/components/elements/textarea';
 import { Button } from '@/components/elements/button';
+import { Spinner } from '@/components/elements/spinner';
 
 import { submitContactForm } from '../helpers/submit';
 import { contactDefaultValues, contactFormSchema } from '../helpers/schema';
@@ -36,7 +37,7 @@ export default function ActualForm(formProps: ActualFormProps) {
 
   if (isSubmitted && isSubmitSuccessful && isValid)
     return (
-      <div className="flex w-full flex-col items-center text-center">
+      <div className="mt-14 flex w-full flex-col items-center text-center">
         <h1 className="text-3xl md:text-5xl">{formProps.success_title}</h1>
         <p className="mb-6 mt-4 max-w-96 text-zinc-400">{formProps.success_message}</p>
         <div className="flex w-full items-center gap-2 md:justify-center md:gap-4">
@@ -112,7 +113,7 @@ export default function ActualForm(formProps: ActualFormProps) {
           )}
         />
         <Button className="!mt-6 w-full" type="submit">
-          {isSubmitting ? 'Submitting...' : formProps.button_label}
+          {isSubmitting ? <Spinner className="border-zinc-900" size="xs" /> : formProps.button_label}
         </Button>
       </form>
     </Form>
