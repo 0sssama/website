@@ -6,6 +6,7 @@ import { Header } from '@/components/layouts/header';
 import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
 import { StoryblokProvider } from '@/base/providers';
 import { Image } from '@/components/elements/image';
+import { Toaster } from '@/components/elements/toaster';
 import { cn } from '@/base/utils/cn';
 import noise from '@/assets/images/noise.webp';
 
@@ -33,6 +34,7 @@ export default async function GlobalLayout({ children, header, footer }: GlobalL
           {footer && <Footer {...footer} />}
           <Analytics />
           <SpeedInsights />
+          <Toaster />
         </body>
       </html>
     </StoryblokProvider>

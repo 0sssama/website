@@ -1,5 +1,7 @@
 import type { z } from 'zod';
 
+import type { ButtonModel, ButtonProps } from '@/components/elements/button';
+
 import type { contactFormSchema } from './helpers/schema';
 
 export interface ContactFormProps {
@@ -22,8 +24,16 @@ export interface ContactFormProps {
   // success
   success_title: string;
   success_message: string;
+  success_btns: ButtonModel[];
 }
+
+export interface SubmitButtonProps extends ButtonProps {}
 
 export type ActualFormProps = Omit<ContactFormProps, 'title'>;
 
 export type ContactFormSchema = z.infer<typeof contactFormSchema>;
+
+export interface FormState {
+  success: boolean;
+  error: string | null;
+}

@@ -21,4 +21,8 @@ export const iconsRegistry = {
     title: 'Check',
     component: dynamic(() => import(`./check`)),
   },
+  X: {
+    title: 'X',
+    component: dynamic(() => import(`./x`)),
+  },
 };
