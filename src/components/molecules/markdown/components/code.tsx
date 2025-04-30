@@ -12,7 +12,7 @@ export default function Code({ className, ...props }: any) {
       style={tomorrow}
       language={hasLang[1]}
       PreTag="div"
-      className="scrollbar-thin scrollbar-track-base-content/5 scrollbar-thumb-base-content/40 scrollbar-track-rounded-xl scrollbar-thumb-rounded !m-0 w-full rounded-xl !bg-gradient-to-b !from-zinc-900 !to-zinc-950 font-mono text-xs"
+      className="scrollbar-thin scrollbar-track-base-content/5 scrollbar-thumb-base-content/40 scrollbar-track-rounded-xl scrollbar-thumb-rounded m-0! w-full rounded-xl bg-linear-to-b! from-zinc-900! to-zinc-950! font-mono text-xs"
       //   useInlineStyles
     >
       {String(props.children).replace(/\n$/, '')}

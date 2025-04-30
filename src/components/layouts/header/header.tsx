@@ -17,14 +17,14 @@ export default function Header({ navLinks, button }: HeaderProps) {
   return (
     <header
       className={cn(
-        'fixed left-0 right-0 top-4 z-50 flex w-full items-center justify-center lg:top-6',
+        'fixed top-4 right-0 left-0 z-50 flex w-full items-center justify-center lg:top-6',
         isScrolled && 'px-2',
       )}
     >
       <div
         className={cn(
           'container flex items-center justify-between rounded-full border border-transparent py-3',
-          isScrolled && 'border-border bg-background/85 backdrop-blur',
+          isScrolled && 'border-border bg-background/85 backdrop-blur-sm',
         )}
       >
         <div className="flex-1">

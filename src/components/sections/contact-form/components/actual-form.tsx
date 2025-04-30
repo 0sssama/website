@@ -39,7 +39,7 @@ export default function ActualForm(formProps: ActualFormProps) {
     return (
       <div className="mt-14 flex w-full flex-col items-center text-center">
         <h1 className="text-3xl md:text-5xl">{formProps.success_title}</h1>
-        <p className="mb-6 mt-4 max-w-96 text-zinc-400">{formProps.success_message}</p>
+        <p className="mt-4 mb-6 max-w-96 text-zinc-400">{formProps.success_message}</p>
         <div className="flex w-full items-center gap-2 md:justify-center md:gap-4">
           {Array.isArray(formProps.success_btns) &&
             formProps.success_btns.map((button, index) => <Button key={index} {...button} />)}
@@ -50,7 +50,7 @@ export default function ActualForm(formProps: ActualFormProps) {
   return (
     <Form {...form}>
       {errors.root && (
-        <div className="text-cente flex w-full items-center justify-center rounded-2xl border border-destructive/50 bg-destructive/10 px-4 py-8">
+        <div className="text-cente border-destructive/50 bg-destructive/10 flex w-full items-center justify-center rounded-2xl border px-4 py-8">
           <p className="text-destructive">{errors.root.message}</p>
         </div>
       )}
@@ -112,7 +112,7 @@ export default function ActualForm(formProps: ActualFormProps) {
             </FormItem>
           )}
         />
-        <Button className="!mt-6 w-full" type="submit">
+        <Button className="mt-6! w-full" type="submit">
           {isSubmitting ? <Spinner className="border-zinc-900" size="xs" /> : formProps.button_label}
         </Button>
       </form>

@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn';
 import type { TextareaProps } from './textarea.types';
 
 export const textareaVariants = cva(
-  'flex min-h-28 w-full rounded-sm resize-none border px-4 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+  'flex min-h-28 w-full rounded-sm resize-none border px-4 py-3 text-sm focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
   {
     variants: {
       variant: {
