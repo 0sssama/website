@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import { storyblokApi } from '@/services/storyblok/api';
 
 import type { SbPageData } from '../types';

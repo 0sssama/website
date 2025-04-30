@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-
 import type { SbBlogPostData, SbStoryData } from '@/services/storyblok';
 import { storyblokApi } from '@/services/storyblok';
 

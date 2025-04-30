@@ -8,21 +8,7 @@ import type { PageHeroProps } from '@/components/sections/page-hero';
 import type { BlogPostsGridProps } from '@/components/sections/blog-posts-grid';
 import type { ContactFormProps } from '@/components/sections/contact-form';
 
-const componentNames = [
-  'markdown',
-  'hero',
-  'page_hero',
-  'newsletter_cta',
-  'call_to_action',
-  'blog_posts_grid',
-  'contact_form',
-] as const;
-
-export type ComponentName = (typeof componentNames)[number];
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
-// TODO: Fix any type
-export const componentsRegistry: Record<ComponentName, any> = {
+export const componentsRegistry = {
   // MOLECULES
   markdown: dynamic(() => import('@/components/molecules/markdown/markdown')),
 

@@ -1,6 +1,5 @@
 'use server';
 
-/* eslint-disable no-console */
 import { sendContactEmail } from '@/services/resend';
 
 import { contactFormSchema } from '../helpers/schema';
@@ -17,7 +16,6 @@ export async function submitContactForm(formData: FormData): Promise<{ error: st
 
     return { error: null };
   } catch (error) {
-    // eslint-disable-next-line no-console
     console.error('Error submitting contact form:', error);
     return { error: 'Server error. Please try again later.' };
   }
