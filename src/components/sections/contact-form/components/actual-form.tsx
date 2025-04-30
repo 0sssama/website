@@ -11,7 +11,7 @@ import { Button } from '@/components/elements/button';
 import { Spinner } from '@/components/elements/spinner';
 import { objToFormData } from '@/utils/obj-to-formdata';
 
-import { submitContactForm } from '../actions/submit-contact-form';
+import { submitContactForm } from '../actions/submit';
 import { contactDefaultValues, contactFormSchema } from '../helpers/schema';
 import type { ActualFormProps, ContactFormSchema } from '../contact-form.types';
 

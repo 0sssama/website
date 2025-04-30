@@ -10,10 +10,11 @@ import { Button } from '@/components/elements/button';
 import { Icon } from '@/components/elements/icon';
 import Spinner from '@/components/elements/spinner/spinner';
 import { useLocalStorage } from '@/hooks/use-local-storage';
+import { objToFormData } from '@/utils/obj-to-formdata';
 
 import type { NewsletterFormProps, NewsletterFormSchema } from '../newsletter-cta.types';
 import { newsletterDefaultValues, newsletterFormSchema } from '../helpers/schema';
-import { submitNewsletterForm } from '../helpers/submit';
+import { submitNewsletterForm } from '../actions/submit';
 
 export default function NewsletterForm({ inputPlaceholder, buttonText }: NewsletterFormProps) {
   const form = useForm<NewsletterFormSchema>({
@@ -25,19 +26,18 @@ export default function NewsletterForm({ inputPlaceholder, buttonText }: Newslet
 
   const [registered, setRegistered] = useLocalStorage('registered', false);
 
-  const onSubmit = (values: NewsletterFormSchema) =>
-    submitNewsletterForm(values)
-      .then((res) => {
-        if (res.ok && res.status === 200) {
-          toast.success('Success! Thank you for subscribing :)');
-          form.clearErrors();
-          setRegistered(true);
-        }
-      })
-      .catch((error) => {
-        form.setError('root', { message: 'Unable to send message. Please try again later.' });
-        toast.error(error.message);
-      });
+  const onSubmit = async (values: NewsletterFormSchema) => {
+    const { error } = await submitNewsletterForm(objToFormData(values));
+
+    if (error) {
+      form.setError('root', { message: error });
+      toast.error(error);
+    } else {
+      toast.success('Success! Thank you for subscribing :)');
+      form.clearErrors();
+      setRegistered(true);
+    }
+  };
 
   if ((isSubmitted && isSubmitSuccessful && isValid) || registered)
     return (
