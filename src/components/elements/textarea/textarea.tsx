@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import { cva } from 'class-variance-authority';
 
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 import type { TextareaProps } from './textarea.types';
 

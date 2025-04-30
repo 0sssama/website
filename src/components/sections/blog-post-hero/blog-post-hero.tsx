@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { formatDate } from '@/base/utils/format-date';
-import { contentReadTime } from '@/base/utils/content-read-time';
+import { formatDate } from '@/utils/format-date';
+import { contentReadTime } from '@/utils/content-read-time';
 import { Image } from '@/components/elements/image';
 
 import type { BlogPostHeroProps } from './blog-post-hero.types';

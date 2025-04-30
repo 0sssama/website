@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { formatLocalTime } from '@/base/utils/format-local-time';
+import { formatLocalTime } from '@/utils/format-local-time';
 
 export default function LocalTime() {
   const [time, setTime] = useState<string | null>(null);

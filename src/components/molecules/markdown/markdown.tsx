@@ -1,7 +1,7 @@
 import MarkdownToJSX from 'markdown-to-jsx';
 
-import { sanitizeMarkdown } from '@/base/utils/sanitize-markdown';
-import { cn } from '@/base/utils/cn';
+import { sanitizeMarkdown } from '@/utils/sanitize-markdown';
+import { cn } from '@/utils/cn';
 
 import Code from './components/code';
 import Pre from './components/pre';

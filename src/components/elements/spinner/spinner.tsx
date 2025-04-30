@@ -1,4 +1,4 @@
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 import type { SpinnerProps } from './spinner.types';
 

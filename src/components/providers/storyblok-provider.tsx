@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { initStoryblok } from '@/base/services/storyblok/api';
+import { initStoryblok } from '@/services/storyblok/api';
 
 initStoryblok();
 

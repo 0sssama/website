@@ -7,12 +7,14 @@ import { isValidElement, type ReactNode } from 'react';
  *
  * @returns {string} The inner text.
  */
-export default function getNodeInnerText(node: ReactNode): string {
+export function getNodeInnerText(node: ReactNode): string {
   if (typeof node === 'string' || typeof node === 'number') return node.toString();
 
   if (Array.isArray(node)) return node.map(getNodeInnerText).join('');
 
-  if (node && typeof node === 'object' && isValidElement(node)) return getNodeInnerText(node.props.children);
+  if (node && typeof node === 'object' && isValidElement(node))
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return getNodeInnerText((node.props as any).children as ReactNode);
 
   return '';
 }

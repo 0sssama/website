@@ -1,5 +1,5 @@
 export interface NextPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }

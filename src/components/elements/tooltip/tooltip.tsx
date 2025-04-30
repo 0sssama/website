@@ -3,7 +3,7 @@
 import { forwardRef, type FC, type ElementRef, type ComponentPropsWithoutRef } from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 import type { TooltipProps } from './tooltip.types';
 
