@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 import { getAllPages } from '@/services/storyblok';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://labrahmi.me';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const allPages = await getAllPages();
