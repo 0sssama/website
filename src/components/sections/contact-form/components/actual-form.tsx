@@ -9,8 +9,9 @@ import { Input } from '@/components/elements/input';
 import { Textarea } from '@/components/elements/textarea';
 import { Button } from '@/components/elements/button';
 import { Spinner } from '@/components/elements/spinner';
+import { objToFormData } from '@/utils/obj-to-formdata';
 
-import { submitContactForm } from '../helpers/submit';
+import { submitContactForm } from '../actions/submit-contact-form';
 import { contactDefaultValues, contactFormSchema } from '../helpers/schema';
 import type { ActualFormProps, ContactFormSchema } from '../contact-form.types';
 
@@ -22,18 +23,17 @@ export default function ActualForm(formProps: ActualFormProps) {
 
   const { isSubmitting, isSubmitSuccessful, isSubmitted, isValid, errors } = useFormState({ control: form.control });
 
-  const onSubmit = (values: ContactFormSchema) =>
-    submitContactForm(values)
-      .then((res) => {
-        if (res.ok && res.status === 200) {
-          toast.success('Message sent successfully!');
-          form.clearErrors();
-        }
-      })
-      .catch((error) => {
-        form.setError('root', { message: 'Unable to send message. Please try again later.' });
-        toast.error(error.message);
-      });
+  const onSubmit = async (values: ContactFormSchema) => {
+    const { error } = await submitContactForm(objToFormData(values));
+
+    if (error) {
+      form.setError('root', { message: error });
+      toast.error(error);
+    } else {
+      toast.success('Message sent successfully!');
+      form.clearErrors();
+    }
+  };
 
   if (isSubmitted && isSubmitSuccessful && isValid)
     return (
