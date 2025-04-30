@@ -9,7 +9,7 @@ export default function Spinner({ size = 'md', className }: SpinnerProps) {
       style={{
         ...variants[size],
       }}
-      className={cn('border-currentColor animate-spin rounded-full border-solid !border-t-transparent', className)}
+      className={cn('border-currentColor animate-spin rounded-full border-solid border-t-transparent!', className)}
     />
   );
 }
