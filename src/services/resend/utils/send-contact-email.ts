@@ -1,5 +1,5 @@
 import type { ContactFormSchema } from '@/components/sections/contact-form/contact-form.types';
-import { resend } from '@/base/services/resend';
+import { resend } from '@/services/resend';
 
 export const sendContactEmail = async (body: ContactFormSchema) =>
   await resend.emails.send({

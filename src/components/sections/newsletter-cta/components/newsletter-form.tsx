@@ -9,7 +9,7 @@ import { Input } from '@/components/elements/input';
 import { Button } from '@/components/elements/button';
 import { Icon } from '@/components/elements/icon';
 import Spinner from '@/components/elements/spinner/spinner';
-import { useLocalStorage } from '@/base/hooks/use-local-storage';
+import { useLocalStorage } from '@/hooks/use-local-storage';
 
 import type { NewsletterFormProps, NewsletterFormSchema } from '../newsletter-cta.types';
 import { newsletterDefaultValues, newsletterFormSchema } from '../helpers/schema';

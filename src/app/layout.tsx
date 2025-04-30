@@ -1,6 +1,6 @@
 import { GlobalLayout } from '@/components/layouts/global-layout';
 import '@/base/styles/globals.css';
-import { getPageBySlug } from '@/base/services/storyblok';
+import { getPageBySlug } from '@/services/storyblok';
 
 export default async function RootLayout({
   children,

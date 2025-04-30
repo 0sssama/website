@@ -4,10 +4,10 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Header } from '@/components/layouts/header';
 import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
-import { StoryblokProvider } from '@/base/providers';
+import { StoryblokProvider } from '@/components/providers';
 import { Image } from '@/components/elements/image';
 import { Toaster } from '@/components/elements/toaster';
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 import noise from '@/assets/images/noise.webp';
 
 import { Footer } from '../footer';

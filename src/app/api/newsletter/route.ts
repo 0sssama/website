@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import type { NextRequest } from 'next/server';
 
-import { sendContactEmail } from '@/base/services/resend';
+import { sendContactEmail } from '@/services/resend';
 import { newsletterFormSchema } from '@/components/sections/newsletter-cta/helpers/schema';
 
 export async function POST(request: NextRequest) {

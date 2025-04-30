@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 
-import type { SbBlogPostData, SbStoryData } from '@/base/services/storyblok';
-import { storyblokApi } from '@/base/services/storyblok';
+import type { SbBlogPostData, SbStoryData } from '@/services/storyblok';
+import { storyblokApi } from '@/services/storyblok';
 
 export const getAllBlogPosts = async (): Promise<SbStoryData<SbBlogPostData>[]> => {
   const version = process.env.NODE_ENV === 'production' ? 'published' : 'draft';

@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { storyblokInit, apiPlugin, getStoryblokApi } from '@storyblok/react/rsc';
 
-import { componentsRegistry } from '@/base/utils/components-registry';
+import { componentsRegistry } from '@/utils/components-registry';
 
 export const initStoryblok = () => {
   storyblokInit({

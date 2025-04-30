@@ -1,4 +1,4 @@
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 import { Button } from '@/components/elements/button';
 import { Markdown } from '@/components/molecules/markdown';
 

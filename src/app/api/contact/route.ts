@@ -2,7 +2,7 @@
 import type { NextRequest } from 'next/server';
 
 import { contactFormSchema } from '@/components/sections/contact-form/helpers/schema';
-import { sendContactEmail } from '@/base/services/resend';
+import { sendContactEmail } from '@/services/resend';
 
 export async function POST(request: NextRequest) {
   const body = await request.json();

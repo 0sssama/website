@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { HOME_ROUTE } from '@/base/config/routes.config';
 import { Button } from '@/components/elements/button';
 import { Link } from '@/components/elements/link';
-import { useScroll } from '@/base/hooks/use-scroll';
-import { cn } from '@/base/utils/cn';
+import { useScroll } from '@/hooks/use-scroll';
+import { cn } from '@/utils/cn';
 import logo from '@/assets/images/logo.svg';
 
 import type { HeaderProps } from './header.types';

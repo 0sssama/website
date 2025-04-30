@@ -1,7 +1,7 @@
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export default function Code({ className, ...props }: any) {

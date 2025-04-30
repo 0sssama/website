@@ -1,5 +1,5 @@
-import { cn } from '@/base/utils/cn';
-import { getAllBlogPosts } from '@/base/services/storyblok';
+import { cn } from '@/utils/cn';
+import { getAllBlogPosts } from '@/services/storyblok';
 import { BlogPostCard } from '@/components/molecules/blog-post-card';
 
 import type { BlogPostsGridProps } from './blog-posts-grid.types';

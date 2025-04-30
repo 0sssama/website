@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { getAllBlogPosts, getBlogPostBySlug, getBlogPostMetadata } from '@/base/services/storyblok';
+import { getAllBlogPosts, getBlogPostBySlug, getBlogPostMetadata } from '@/services/storyblok';
 import { Markdown } from '@/components/molecules/markdown';
 import { BlogPostHero } from '@/components/sections/blog-post-hero';
 import type { NextPageProps } from '@/base/types/next';

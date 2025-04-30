@@ -1,6 +1,6 @@
 import { notFound, redirect } from 'next/navigation';
 
-import { getAllPages, getPageBySlug, getPageMetadata } from '@/base/services/storyblok';
+import { getAllPages, getPageBySlug, getPageMetadata } from '@/services/storyblok';
 import { PageBuilder } from '@/components/templates/page-builder';
 import type { NextPageProps } from '@/base/types/next';
 

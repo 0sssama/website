@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { storyblokApi } from '@/base/services/storyblok/api';
+import { storyblokApi } from '@/services/storyblok/api';
 
 import type { SbPageData } from '../types';
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cva } from 'class-variance-authority';
 
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 import { Link } from '@/components/elements/link';
 
 import type { ButtonProps } from './button.types';

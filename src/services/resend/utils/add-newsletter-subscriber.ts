@@ -1,4 +1,4 @@
-import { resend } from '@/base/services/resend';
+import { resend } from '@/services/resend';
 
 export const addNewsletterSubscriber = async (email: string) => {
   if (!process.env.RESEND_NEWSLETTER_AUDIENCE_ID) throw new Error('RESEND_NEWSLETTER_AUDIENCE_ID is not set');

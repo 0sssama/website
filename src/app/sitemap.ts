@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { getAllPages } from '@/base/services/storyblok';
+import { getAllPages } from '@/services/storyblok';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 

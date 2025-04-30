@@ -1,6 +1,6 @@
 import { default as NextImage } from 'next/image';
 
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 import { extractDimensions } from './helpers/extract-dimensions';
 import type { ImageProps } from './image.types';
