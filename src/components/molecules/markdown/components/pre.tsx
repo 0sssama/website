@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import getNodeInnerText from '@/base/utils/get-node-inner-text';
+import { getNodeInnerText } from '@/base/utils/get-node-inner-text';
 import { Icon } from '@/components/elements/icon';
 import { Tooltip } from '@/components/elements/tooltip';
 import { cn } from '@/base/utils/cn';

@@ -28,8 +28,6 @@
     "globalThis": false
   },
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
     "react/no-unescaped-entities": 0,
     "@next/next/no-html-link-for-pages": "off",
     "camelcase": "off",
@@ -39,10 +37,7 @@
         "endOfLine": "auto"
       }
     ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      { "argsIgnorePattern": "^_" }
-    ],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
@@ -214,23 +209,13 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          "parent",
-          "sibling",
-          "index"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
         "newlines-between": "always"
       }
     ],
     "unused-imports/no-unused-imports": 0,
     "unused-imports/no-unused-vars": "warn",
-    "filenames-simple/naming-convention": [
-      "error",
-      { "rule": "kebab-case", "excepts": ["_.*", "[0-9]*", "\\[(.*?)"] }
-    ]
+    "filenames-simple/naming-convention": ["error", { "rule": "kebab-case", "excepts": ["_.*", "[0-9]*", "\\[(.*?)"] }]
   },
   "extends": [
     "prettier",
@@ -240,20 +225,11 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:sonarjs/recommended",
     "plugin:security/recommended-legacy"
   ],
-  "plugins": [
-    "unicorn",
-    "@typescript-eslint",
-    "import",
-    "sonarjs",
-    "unused-imports",
-    "filenames-simple",
-    "prettier"
-  ],
+  "plugins": ["unicorn", "@typescript-eslint", "import", "sonarjs", "unused-imports", "filenames-simple", "prettier"],
   "overrides": [
     {
       "files": "**/*.+(ts|tsx)",

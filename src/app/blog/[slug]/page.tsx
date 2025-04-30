@@ -6,7 +6,9 @@ import { BlogPostHero } from '@/components/sections/blog-post-hero';
 import type { NextPageProps } from '@/base/types/next';
 
 export default async function BlogPost({ params }: NextPageProps) {
-  const post = await getBlogPostBySlug(params.slug);
+  const { slug } = await params;
+
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) notFound();
 
@@ -23,7 +25,9 @@ export default async function BlogPost({ params }: NextPageProps) {
 }
 
 export async function generateMetadata({ params }: NextPageProps) {
-  return await getBlogPostMetadata(params.slug);
+  const { slug } = await params;
+
+  return await getBlogPostMetadata(slug);
 }
 
 export async function generateStaticParams() {

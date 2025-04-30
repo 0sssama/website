@@ -14,17 +14,14 @@ import { Footer } from '../footer';
 
 import type { GlobalLayoutProps } from './global-layout.types';
 
-export default async function GlobalLayout({ children, header, footer }: GlobalLayoutProps) {
+export default function GlobalLayout({ children, header, footer }: GlobalLayoutProps) {
   return (
     <StoryblokProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={cn(dmSansFont.variable, calSansFont.variable)}>
           {/* very unnecessary filter but it makes the website look less boring imo :) */}
           <Image
-            image={{
-              filename: noise.src,
-              alt: 'Noise',
-            }}
+            image={{ filename: noise.src, alt: 'Noise' }}
             fill
             priority
             className="pointer-events-none !fixed !left-0 top-0 z-[-1] !h-screen !w-screen object-cover opacity-50"

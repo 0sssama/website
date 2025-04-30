@@ -2,8 +2,6 @@ import { GlobalLayout } from '@/components/layouts/global-layout';
 import '@/base/styles/globals.css';
 import { getPageBySlug } from '@/base/services/storyblok';
 
-export { metadata, viewport } from '@/base/config/metadata.config';
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -20,3 +18,5 @@ export default async function RootLayout({
     </GlobalLayout>
   );
 }
+
+export { metadata, viewport } from '@/base/config/metadata.config';
