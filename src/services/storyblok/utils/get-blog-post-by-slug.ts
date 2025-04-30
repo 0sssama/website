@@ -7,10 +7,12 @@ export const getBlogPostBySlug = async (slug: string): Promise<SbBlogPostData | 
   if (!slug) return null;
 
   const version = process.env.NODE_ENV === 'production' ? 'published' : 'draft';
+  const cache = process.env.NODE_ENV === 'production' ? 'force-cache' : 'no-store';
 
   const sbApi = storyblokApi();
+
   try {
-    const post = await sbApi.getStory(`blog/${slug}`, { version }, { cache: 'no-store' });
+    const post = await sbApi.getStory(`blog/${slug}`, { version }, { cache });
 
     return post.data.story.content as SbBlogPostData;
   } catch {
