@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import { storyblokInit, apiPlugin, getStoryblokApi } from '@storyblok/react/rsc';
 
 import { componentsRegistry } from '@/utils/components-registry';

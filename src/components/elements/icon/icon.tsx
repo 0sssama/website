@@ -1,5 +1,3 @@
-/* eslint-disable security/detect-object-injection */
-
 import { iconsRegistry } from '@/components/icons';
 
 import type { IconProps } from './icon.types';
