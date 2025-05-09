@@ -1,14 +1,11 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { Header } from '@/components/layouts/header';
-import { calSansFont, dmSansFont } from '@/base/config/fonts.config';
+import { dmSansFont, geistSansFont } from '@/base/config/fonts.config';
 import { StoryblokProvider } from '@/components/providers';
-import { Image } from '@/components/elements/image';
 import { Toaster } from '@/components/elements/toaster';
 import { cn } from '@/utils/cn';
-import noise from '@/assets/images/noise.webp';
 
 import { Footer } from '../footer';
 
@@ -18,14 +15,7 @@ export default function GlobalLayout({ children, header, footer }: GlobalLayoutP
   return (
     <StoryblokProvider>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(dmSansFont.variable, calSansFont.variable)}>
-          {/* very unnecessary filter but it makes the website look less boring imo :) */}
-          <Image
-            image={{ filename: noise.src, alt: 'Noise' }}
-            fill
-            priority
-            className="pointer-events-none fixed! top-0 left-0! z-[-1] h-screen! w-screen! object-cover opacity-50"
-          />
+        <body className={cn(dmSansFont.variable, geistSansFont.variable)}>
           {header && <Header {...header} />}
           {children}
           {footer && <Footer {...footer} />}
