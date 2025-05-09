@@ -15,7 +15,7 @@ export default function SocialMediaLink({ link, icon }: SocialMediaLinkProps) {
     <Tooltip content={label}>
       <Link
         href={href}
-        className="rounded-full border border-zinc-800 bg-zinc-950 p-[10px] hover:bg-zinc-800 active:bg-zinc-800"
+        className="rounded-full border border-zinc-200 bg-zinc-50 p-[10px] hover:bg-zinc-200 active:bg-zinc-200"
       >
         <p className="sr-only">Visit my {label}</p>
         <Icon variant={icon} title={label} className="h-4 w-4" />

@@ -19,10 +19,7 @@ export default function Hero({ heading, description, buttons, className }: HeroP
           <ParsedTitle>{heading}</ParsedTitle>
         </h1>
         <div className="mt-6 mb-8 md:max-w-xl">
-          <Markdown
-            className="prose-strong:text-zinc-900 leading-none! font-light *:text-base *:text-zinc-900!"
-            content={description}
-          />
+          <Markdown className="leading-none! *:text-base [&_*]:text-zinc-700!" content={description} />
         </div>
         <div className="flex w-full items-center gap-2 md:justify-center md:gap-4">
           {Array.isArray(buttons) && buttons.map((button, index) => <Button key={index} {...button} />)}

@@ -180,7 +180,7 @@
   }
 
   body {
-    @apply relative min-h-screen overflow-x-hidden bg-zinc-100 font-sans text-zinc-900;
+    @apply relative min-h-screen overflow-x-hidden bg-zinc-50 font-sans text-zinc-900;
   }
 
   main {

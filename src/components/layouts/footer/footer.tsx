@@ -10,14 +10,14 @@ import type { FooterProps } from './footer.types';
 
 export default function Footer({ description, copyrightText, includeLocalTime, socialMediaLinks }: FooterProps) {
   return (
-    <footer className="relative container flex w-full flex-col items-center overflow-hidden border border-t-0 border-b-0 border-zinc-800 py-16 max-md:border-0 md:rounded-t-xl md:px-8">
+    <footer className="relative container flex w-full flex-col items-center overflow-hidden border border-t-0 border-b-0 border-zinc-200 py-16 max-md:border-0 md:rounded-t-xl md:px-8">
       <div className="flex w-full flex-col items-center md:flex-row md:items-end md:justify-between">
         <div className="flex flex-col max-md:mb-8 max-md:items-center">
           <Link href={{ url: HOME_ROUTE }} className="mb-4 hover:opacity-80">
             <Image src={logo} alt="Labrahmi Logo" width={42} height={39} className="pointer-events-none" />
           </Link>
           {description && (
-            <p className="max-w-[240px] text-sm font-medium text-zinc-400 max-md:text-center">{description}</p>
+            <p className="max-w-[240px] text-sm font-medium text-zinc-500 max-md:text-center">{description}</p>
           )}
         </div>
         <div className="flex flex-col items-center md:items-end">
@@ -29,11 +29,11 @@ export default function Footer({ description, copyrightText, includeLocalTime, s
         </div>
       </div>
       {copyrightText && (
-        <p className="mt-16 text-center text-xs text-zinc-500 md:text-right">
+        <p className="mt-16 text-center text-xs text-zinc-700 md:text-right">
           &copy; {new Date().getFullYear()} {copyrightText}
         </p>
       )}
-      <div className="pointer-events-none absolute top-0 right-0 -bottom-20 left-0 z-[-1] bg-[linear-gradient(to_right,#fafafa_1px,transparent_1px),linear-gradient(to_bottom,#fafafa_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] bg-[size:2.66rem_2.66rem] opacity-10" />
+      <div className="pointer-events-none absolute top-0 right-0 -bottom-20 left-0 z-[-1] bg-[linear-gradient(to_right,black_1px,transparent_1px),linear-gradient(to_bottom,black_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] bg-[size:2.66rem_2.66rem] opacity-10" />
     </footer>
   );
 }

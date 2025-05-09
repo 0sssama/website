@@ -24,7 +24,7 @@ export default function Header({ navLinks, button }: HeaderProps) {
       <div
         className={cn(
           'container flex items-center justify-between rounded-full border border-transparent py-2',
-          isScrolled && 'border-zinc-200 bg-zinc-100/85 backdrop-blur-sm',
+          isScrolled && 'max-w-3xl border-zinc-200 bg-zinc-50/75 backdrop-blur-sm',
         )}
       >
         <div className="flex-1">
