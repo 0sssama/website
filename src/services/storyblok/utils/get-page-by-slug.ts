@@ -2,10 +2,12 @@ import { storyblokApi } from '@/services/storyblok/api';
 
 import type { SbPageData } from '../types';
 
+import { getStoryblokVersion } from './get-storyblok-version';
+
 export const getPageBySlug = async (slug: string): Promise<SbPageData | null> => {
   if (!slug) return null;
 
-  const version = process.env.NODE_ENV === 'production' ? 'published' : 'draft';
+  const version = getStoryblokVersion();
   const cache = process.env.NODE_ENV === 'production' ? 'force-cache' : 'no-store';
 
   const sbApi = storyblokApi();
