@@ -46,9 +46,23 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --gradient-dark: hsl(330 79% 32%);
-  --gradient-light: hsl(330 66% 68%);
-  --gradient-darker: hsl(330 87% 25%);
+  --accent-value: 250;
+
+  --color-accent-50: hsl(var(--accent-value), 75%, 98%);
+  --color-accent-100: hsl(var(--accent-value), 75%, 95%);
+  --color-accent-200: hsl(var(--accent-value), 75%, 90%);
+  --color-accent-300: hsl(var(--accent-value), 75%, 85%);
+  --color-accent-400: hsl(var(--accent-value), 75%, 75%);
+  --color-accent-500: hsl(var(--accent-value), 75%, 65%);
+  --color-accent-600: hsl(var(--accent-value), 75%, 55%);
+  --color-accent-700: hsl(var(--accent-value), 75%, 45%);
+  --color-accent-800: hsl(var(--accent-value), 75%, 35%);
+  --color-accent-900: hsl(var(--accent-value), 75%, 30%);
+  --color-accent-950: hsl(var(--accent-value), 75%, 20%);
+
+  --gradient-dark: var(--color-accent-700);
+  --gradient-light: var(--color-accent-400);
+  --gradient-darker: var(--color-accent-800);
 
   --hero-gradient-text: circle at center, var(--gradient-dark), var(--gradient-light), var(--gradient-darker);
 

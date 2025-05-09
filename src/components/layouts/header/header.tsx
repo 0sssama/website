@@ -24,7 +24,7 @@ export default function Header({ navLinks, button }: HeaderProps) {
       <div
         className={cn(
           'container flex items-center justify-between rounded-full border border-transparent py-2',
-          isScrolled && 'max-w-3xl border-zinc-200 bg-zinc-50/75 backdrop-blur-sm',
+          isScrolled && 'max-w-[920px] border-zinc-200 bg-zinc-50/75 backdrop-blur-sm',
         )}
       >
         <div className="flex-1">
@@ -37,14 +37,20 @@ export default function Header({ navLinks, button }: HeaderProps) {
             <Link
               key={index}
               href={{ url: `/${item.href?.cached_url}` }}
-              className="p-3 text-sm text-zinc-900 hover:opacity-80"
+              className="p-3 text-sm text-zinc-900 hover:opacity-70"
             >
               {item.label}
             </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end">
-          {Array.isArray(button) && button.length > 0 && <Button {...button[0]} />}
+          {Array.isArray(button) && button.length > 0 && (
+            <Button
+              {...button[0]}
+              variant={isScrolled ? 'accent' : 'outline'}
+              className={cn(!isScrolled && 'border-zinc-200 bg-white/60')}
+            />
+          )}
         </div>
       </div>
     </header>
