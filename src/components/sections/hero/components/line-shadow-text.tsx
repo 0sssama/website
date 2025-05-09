@@ -9,7 +9,7 @@ interface LineShadowTextProps extends Omit<HTMLAttributes<HTMLElement>, keyof Mo
   shadowColor?: string;
 }
 
-export default function LineShadowText({ children, shadowColor = 'white', className, ...props }: LineShadowTextProps) {
+export default function LineShadowText({ children, shadowColor = 'black', className, ...props }: LineShadowTextProps) {
   const content = typeof children === 'string' ? children : null;
 
   if (!content) {
