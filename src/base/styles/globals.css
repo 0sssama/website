@@ -46,7 +46,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --accent-value: 250;
+  --accent-value: 255;
 
   --color-accent-50: hsl(var(--accent-value), 75%, 98%);
   --color-accent-100: hsl(var(--accent-value), 75%, 95%);
