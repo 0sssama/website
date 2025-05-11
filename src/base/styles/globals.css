@@ -1,6 +1,161 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-*: initial;
+  --font-serif: var(--font-geist-sans), ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-sans:
+    var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --drop-shadow-3xl: 10px 10px 45px rgba(255, 255, 255, 0.15);
+  --drop-shadow-border: 0 0 4px rgba(100, 100, 100, 0.05);
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --accent-value: 255;
+
+  --color-accent-50: hsl(var(--accent-value), 75%, 98%);
+  --color-accent-100: hsl(var(--accent-value), 75%, 95%);
+  --color-accent-200: hsl(var(--accent-value), 75%, 90%);
+  --color-accent-300: hsl(var(--accent-value), 75%, 85%);
+  --color-accent-400: hsl(var(--accent-value), 75%, 75%);
+  --color-accent-500: hsl(var(--accent-value), 75%, 65%);
+  --color-accent-600: hsl(var(--accent-value), 75%, 55%);
+  --color-accent-700: hsl(var(--accent-value), 75%, 45%);
+  --color-accent-800: hsl(var(--accent-value), 75%, 35%);
+  --color-accent-900: hsl(var(--accent-value), 75%, 30%);
+  --color-accent-950: hsl(var(--accent-value), 75%, 20%);
+
+  --gradient-dark: var(--color-accent-700);
+  --gradient-light: var(--color-accent-400);
+  --gradient-darker: var(--color-accent-800);
+
+  --hero-gradient-text: circle at center, var(--gradient-dark), var(--gradient-light), var(--gradient-darker);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-aurora: aurora 60s linear infinite;
+  --animate-line-shadow: line-shadow 20s linear infinite;
+  --animate-text-gradient: text-gradient 4s ease-in-out infinite alternate;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes text-gradient {
+  0%,
+  15% {
+    background-position: 0 50%;
+  }
+  85%,
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes aurora {
+  from {
+    background-position:
+      50% 50%,
+      50% 50%;
+  }
+  to {
+    background-position:
+      350% 50%,
+      350% 50%;
+  }
+}
+
+@keyframes line-shadow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% -100%;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= --theme(--breakpoint-sm)) {
+    max-width: none;
+  }
+  @media (width >= 768px) {
+    max-width: 960px;
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
 
 @layer base {
   :root {
@@ -39,7 +194,7 @@
   }
 
   body {
-    @apply relative min-h-screen overflow-x-hidden bg-zinc-900 bg-gradient-to-b from-zinc-900 to-zinc-950 bg-cover font-sans text-zinc-200;
+    @apply relative min-h-screen overflow-x-hidden bg-zinc-50 font-sans text-zinc-900;
   }
 
   main {
@@ -48,24 +203,8 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .gradient-title {
-    background: var(--text-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .gradient-title-inverted {
-    background: var(--text-gradient-inverted);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
   * {
-    @apply scroll-smooth text-zinc-200 transition-all duration-300 ease-in-out;
+    @apply scroll-smooth text-zinc-900 transition-all duration-300 ease-in-out;
   }
 
   h1,
@@ -74,7 +213,7 @@
   h4,
   h5,
   h6 {
-    @apply font-serif;
+    @apply font-serif font-semibold tracking-tighter;
   }
 
   [data-radix-popper-content-wrapper],

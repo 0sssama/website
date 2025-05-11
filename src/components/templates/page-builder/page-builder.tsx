@@ -1,4 +1,4 @@
-import { componentsRegistry } from '@/base/utils/components-registry';
+import { componentsRegistry } from '@/utils/components-registry';
 
 import type { PageBuilderProps, PageSectionProps } from './page-builder.types';
 

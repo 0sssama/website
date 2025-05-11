@@ -1,4 +1,4 @@
-import type { SbBlogPostData } from '@/base/services/storyblok';
+import type { SbBlogPostData } from '@/services/storyblok';
 
 export interface BlogPostHeroProps {
   post: SbBlogPostData;

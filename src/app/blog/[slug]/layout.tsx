@@ -1,4 +1,4 @@
-import { getPageBySlug } from '@/base/services/storyblok';
+import { getPageBySlug } from '@/services/storyblok';
 import { PageBuilder } from '@/components/templates/page-builder';
 
 export default async function BlogLayout({

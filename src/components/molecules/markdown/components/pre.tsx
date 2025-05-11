@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 
-import getNodeInnerText from '@/base/utils/get-node-inner-text';
+import { getNodeInnerText } from '@/utils/get-node-inner-text';
 import { Icon } from '@/components/elements/icon';
 import { Tooltip } from '@/components/elements/tooltip';
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export default function Pre(pre: any) {
@@ -23,17 +23,17 @@ export default function Pre(pre: any) {
 
   return (
     <div className="relative w-full">
-      <div className="absolute right-3 top-3">
+      <div className="absolute top-3 right-3">
         <Tooltip isOpen={copied ? true : undefined} side="left" content={copied ? 'Copied!' : 'Copy Snippet'}>
           <button
-            className="rounded-[10px] border border-border bg-zinc-900/70 !p-2 backdrop-blur-sm hover:opacity-80"
+            className="border-border rounded-[10px] border bg-zinc-900/70 p-2! backdrop-blur-xs hover:opacity-80"
             onClick={copyCode}
           >
             {copied ? <Icon variant="Check" className="h-4 w-4" /> : <Icon variant="Copy" className="h-4 w-4" />}
           </button>
         </Tooltip>
       </div>
-      <pre {...pre} className={cn('!rounded-xl border border-border !p-0', pre.className)}></pre>
+      <pre {...pre} className={cn('border-border rounded-xl! border p-0!', pre.className)}></pre>
     </div>
   );
 }

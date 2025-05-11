@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { getPageBySlug, getPageMetadata } from '@/base/services/storyblok';
+import { getPageBySlug, getPageMetadata } from '@/services/storyblok';
 import { PageBuilder } from '@/components/templates/page-builder';
 
 export default async function HomePage() {

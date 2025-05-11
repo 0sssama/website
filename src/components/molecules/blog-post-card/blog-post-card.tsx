@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { cn } from '@/base/utils/cn';
+import { cn } from '@/utils/cn';
 import { Link } from '@/components/elements/link';
 import { Image } from '@/components/elements/image';
-import { formatDate } from '@/base/utils/format-date';
-import { contentReadTime } from '@/base/utils/content-read-time';
+import { formatDate } from '@/utils/format-date';
+import { contentReadTime } from '@/utils/content-read-time';
 
 import type { BlogPostCardProps } from './blog-post-card.types';
 
