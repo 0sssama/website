@@ -25,4 +25,8 @@ export const iconsRegistry = {
     title: 'X',
     component: dynamic(() => import(`./x`)),
   },
+  Email: {
+    title: 'Email',
+    component: dynamic(() => import(`./email`)),
+  },
 };
